@@ -1,0 +1,264 @@
+
+Robert Moises Vargas Mavarez
+
+Capitulo 2 :
+1.
+
+Los operadores que se pueden usar con boolean son ==, ! y el casteo (boolean).
+Esto es porque == compara valores, ! sirve para negar (true → false), y el casteo convierte tipos. Los demás operadores son matemáticos o de bits, por eso no funcionan con booleanos.
+
+2.
+
+La respuesta correcta es int, long y double.
+Cuando sumas byte + short, Java automáticamente lo convierte a int. Entonces necesitas un tipo igual o mayor (como long o double). No puedes usar tipos más pequeños sin castear.
+
+3.
+
+Las opciones correctas son B, C, D y F.
+El problema es que 2 * ear da como resultado un long, pero se intenta guardar en un int. Entonces hay que convertir el valor a int o cambiar el tipo de variable para que coincida.
+
+4.
+
+La respuesta es true, 20, false.
+Aquí pasa algo importante: (wolf=false) asigna false y devuelve false. Luego se usa XOR (^), y como la izquierda es true, el resultado final es true. Además, wolf queda en false.
+
+5.
+
+Las respuestas correctas son A y C.
+Se trata del orden de prioridad de operadores. Algunas opciones están bien ordenadas (de menor a mayor prioridad), mientras que otras mezclan mal el orden.
+
+6.
+
+La respuesta es no compila (F).
+El error está en el casteo: solo se convierte fruit a int, pero luego se suma con vegetables (float), lo que genera un float. No se puede regresar como long sin otro casteo.
+
+7.
+
+La respuesta es true- false- false.
+El operador & evalúa todo, pero && no siempre. Como una condición es falsa, no se evalúa todo y ph no cambia. Luego el --ph reduce el valor antes de comparar.
+
+8.
+
+La respuesta es 4 - 1.
+pig++ primero devuelve 4 y luego incrementa, pero como se reasigna, el incremento se pierde. En goat -= 1.0, Java hace conversión automática.
+
+9.
+
+Las respuestas correctas son 1, 4 y 5.
+El operador ternario solo evalúa una parte. Además, b++ primero usa el valor y luego incrementa, lo que afecta los resultados.
+
+10.
+
+La respuesta es no compila (G).
+Aunque se usen byte, la multiplicación convierte todo a int. No puedes guardar eso en short sin casteo.
+
+11.
+
+La respuesta es 2, 0, 5.
+* y % tienen la misma prioridad, entonces se evalúan de izquierda a derecha. Solo cambian si hay paréntesis.
+
+12.
+
+La respuesta es post-increment y pre-decrement (D).
+El post-incremento devuelve el valor original antes de aumentar. El pre-decremento reduce primero y luego devuelve el nuevo valor.
+
+13.
+
+La respuesta es true- true- false.
+Se evalúan operadores como &, ^ y !. Al final, la negación hace que el resultado final sea false.
+
+14.
+
+Las respuestas correctas son B, E y G.
+Puedes comparar objetos con !=, una asignación devuelve el valor asignado, y ! no sirve para números.
+
+15.
+
+La respuesta es operador ternario (? :).
+Es el único operador en Java que usa tres valores.
+
+16.
+
+La respuesta es 1 error (B).
+Se intenta guardar un long en un int, lo cual no es válido sin casteo.
+
+17.
+
+Las respuestas son ticketsSold = 6 y ticketsTaken = 4.
+El post-incremento primero usa el valor y luego lo aumenta. Después se multiplica y se suma.
+
+18.
+
+La respuesta es ( ).
+Solo los paréntesis cambian el orden de evaluación en Java.
+
+19.
+
+Las respuestas correctas son start = -128 y end = 12.
+Hay overflow al pasar el límite de byte, lo que genera un número negativo.
+
+20.
+
+Las respuestas son A, D y E.
+Los operadores unarios tienen mayor prioridad. Además, ! es solo para booleanos y el post-decremento devuelve el valor original.
+
+21.
+
+La respuesta es -9, -8, 9.
+El operador ~ invierte bits (da -9). El negativo de 8 es -8. Luego el pre-decremento reduce 10 a 9 antes de imprimir.
+
+
+
+
+CAPITULO 3:
+
+
+1.
+
+Los tipos que se pueden usar en un switch son int, byte, short, char, además de String, enum y sus versiones wrapper. También se puede usar var si el tipo coincide. No se puede usar long ni double porque Java no los soporta en switch.
+
+2.
+
+El resultado es "Just Right".
+Aunque se ven dos else, cada uno pertenece a su if. Primero se cumple el if principal, luego el segundo if es falso, entonces entra a su else.
+
+3.
+
+El for-each funciona con arrays y con clases que implementan Iterable como List y Set. No funciona con Map ni con String, aunque parezca una lista de caracteres.
+
+4.
+
+No compila.
+En los switch expression, Java exige cubrir todos los casos posibles. Como no hay default, falta cubrir opciones y eso genera error.
+
+5.
+
+Hay un error de compilación.
+El problema es que hay un continue antes de un print, entonces ese print nunca se ejecuta, y Java lo detecta como código inalcanzable.
+
+6.
+
+Son correctas varias ideas:
+
+for puede ejecutarse desde 0 veces
+do-while se ejecuta mínimo una vez
+while puede no ejecutarse
+switch con String necesita default si devuelve valor
+7.
+
+Las formas correctas son las que respetan los índices del arreglo.
+Si usas length directamente te pasas del límite. También puedes recorrer en reversa usando length-1.
+
+8.
+
+Hay errores de compilación.
+El problema es el alcance (scope) de la variable en instanceof y también que default no se usa en if. Por eso no compila.
+
+9.
+
+Las respuestas correctas usan break o continue correctamente.
+Aquí lo importante es entender cómo salir de loops anidados usando etiquetas.
+
+10.
+
+Hay 4 errores de compilación.
+Por ejemplo: usar continue en switch, usar valores no constantes en case, y mezclar tipos incorrectos.
+
+11.
+
+El resultado es 3.
+El switch con enum devuelve el valor correspondiente al caso MAMMAL.
+
+12.
+
+El resultado es 23.
+Se van actualizando las variables dentro del while hasta que la condición deja de cumplirse.
+
+13.
+
+No compila.
+Faltan paréntesis en el while. Es un error de sintaxis básico.
+
+14.
+
+Cada for-each toma el tipo del elemento:
+
+int[] → int
+Character[] → Character
+List<Integer> → Integer
+15.
+
+No compila.
+El problema es la sintaxis del case, no puedes poner 'B': 'C' sin repetir case.
+
+16.
+
+Las formas correctas recorren el arreglo desde length-1 hasta 0.
+Si usas length directamente, te sales del arreglo y da error.
+
+17.
+
+Los valores finales son:
+
+participants = 10
+animals = 3
+performers = 3
+Aquí se combinan diferentes tipos de loops.
+18.
+
+El instanceof permite crear variables temporales, pero solo existen si la condición se cumple. Eso es lo que se llama flow scoping.
+
+19.
+
+No compila.
+La variable snake solo existe dentro del do, pero se usa en el while, entonces está fuera de alcance.
+
+20.
+
+Las opciones correctas evitan loops infinitos usando break o continue con etiquetas.
+Si no controlas bien eso, el programa se queda corriendo para siempre.
+
+21.
+
+Se necesitan 4 correcciones.
+Errores típicos: tipo incorrecto en switch, falta de yield, y case duplicados.
+
+22.
+
+El resultado es 5 2 1.
+El switch imprime 5 y luego el while reduce el valor con --.
+
+23.
+
+No compila.
+Hay un else sin un if correspondiente, lo cual es error de sintaxis.
+
+24.
+
+No compila.
+En Java no existe in en for-each, debe ser :.
+
+25.
+
+El resultado es 2.
+Como no hay break, el switch ejecuta varios casos seguidos (fall-through).
+
+26.
+
+El programa entra en loop infinito.
+La condición nunca cambia correctamente dentro del do-while.
+
+27.
+
+No compila.
+En un switch expression, todos los caminos deben devolver valor (yield).
+
+28.
+
+No compila.
+Se redeclara una variable dentro del mismo scope usando instanceof.
+
+29.
+
+El resultado es: -1 0 1 2 3 4 5 6
+Porque es ++y, primero incrementa y luego imprime.
