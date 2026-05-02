@@ -106,3 +106,161 @@ Los operadores unarios tienen mayor prioridad. Además, ! es solo para booleanos
 
 La respuesta es -9, -8, 9.
 El operador ~ invierte bits (da -9). El negativo de 8 es -8. Luego el pre-decremento reduce 10 a 9 antes de imprimir.
+
+
+
+CAPITULO 3 
+
+
+1.
+
+Los tipos que se pueden usar en un switch son int, byte, short, char, además de String, enum y sus versiones wrapper. También se puede usar var si el tipo coincide. No se puede usar long ni double porque Java no los soporta en switch.
+
+2.
+
+El resultado es "Just Right".
+Aunque se ven dos else, cada uno pertenece a su if. Primero se cumple el if principal, luego el segundo if es falso, entonces entra a su else.
+
+3.
+
+El for-each funciona con arrays y con clases que implementan Iterable como List y Set. No funciona con Map ni con String, aunque parezca una lista de caracteres.
+
+4.
+
+No compila.
+En los switch expression, Java exige cubrir todos los casos posibles. Como no hay default, falta cubrir opciones y eso genera error.
+
+5.
+
+Hay un error de compilación.
+El problema es que hay un continue antes de un print, entonces ese print nunca se ejecuta, y Java lo detecta como código inalcanzable.
+
+6.
+
+Son correctas varias ideas:
+
+for puede ejecutarse desde 0 veces
+do-while se ejecuta mínimo una vez
+while puede no ejecutarse
+switch con String necesita default si devuelve valor
+7.
+
+Las formas correctas son las que respetan los índices del arreglo.
+Si usas length directamente te pasas del límite. También puedes recorrer en reversa usando length-1.
+
+8.
+
+Hay errores de compilación.
+El problema es el alcance (scope) de la variable en instanceof y también que default no se usa en if. Por eso no compila.
+
+9.
+
+Las respuestas correctas usan break o continue correctamente.
+Aquí lo importante es entender cómo salir de loops anidados usando etiquetas.
+
+10.
+
+Hay 4 errores de compilación.
+Por ejemplo: usar continue en switch, usar valores no constantes en case, y mezclar tipos incorrectos.
+
+11.
+
+El resultado es 3.
+El switch con enum devuelve el valor correspondiente al caso MAMMAL.
+
+12.
+
+El resultado es 23.
+Se van actualizando las variables dentro del while hasta que la condición deja de cumplirse.
+
+13.
+
+No compila.
+Faltan paréntesis en el while. Es un error de sintaxis básico.
+
+14.
+
+Cada for-each toma el tipo del elemento:
+
+int[] → int
+Character[] → Character
+List<Integer> → Integer
+15.
+
+No compila.
+El problema es la sintaxis del case, no puedes poner 'B': 'C' sin repetir case.
+
+16.
+
+Las formas correctas recorren el arreglo desde length-1 hasta 0.
+Si usas length directamente, te sales del arreglo y da error.
+
+17.
+
+Los valores finales son:
+
+participants = 10
+animals = 3
+performers = 3
+Aquí se combinan diferentes tipos de loops.
+18.
+
+El instanceof permite crear variables temporales, pero solo existen si la condición se cumple. Eso es lo que se llama flow scoping.
+
+19.
+
+No compila.
+La variable snake solo existe dentro del do, pero se usa en el while, entonces está fuera de alcance.
+
+20.
+
+Las opciones correctas evitan loops infinitos usando break o continue con etiquetas.
+Si no controlas bien eso, el programa se queda corriendo para siempre.
+
+21.
+
+Se necesitan 4 correcciones.
+Errores típicos: tipo incorrecto en switch, falta de yield, y case duplicados.
+
+22.
+
+El resultado es 5 2 1.
+El switch imprime 5 y luego el while reduce el valor con --.
+
+23.
+
+No compila.
+Hay un else sin un if correspondiente, lo cual es error de sintaxis.
+
+24.
+
+No compila.
+En Java no existe in en for-each, debe ser :.
+
+25.
+
+El resultado es 2.
+Como no hay break, el switch ejecuta varios casos seguidos (fall-through).
+
+26.
+
+El programa entra en loop infinito.
+La condición nunca cambia correctamente dentro del do-while.
+
+27.
+
+No compila.
+En un switch expression, todos los caminos deben devolver valor (yield).
+
+28.
+
+No compila.
+Se redeclara una variable dentro del mismo scope usando instanceof.
+
+29.
+
+El resultado es: -1 0 1 2 3 4 5 6
+Porque es ++y, primero incrementa y luego imprime.
+
+
+
