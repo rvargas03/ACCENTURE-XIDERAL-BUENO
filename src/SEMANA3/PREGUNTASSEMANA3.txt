@@ -1,0 +1,68 @@
+PREGUNTAS SEMANA 3 
+ROBERT MOISES VARGAS MAVAREZ
+
+1.
+No compila porque estás intentando guardar un int en un String sin convertirlo. Java no hace esa conversión automática.
+
+2.
+C, E y F fallan porque usan mal tipos o no definen tamaño del arreglo. En arrays multidimensionales, mínimo la primera dimensión sí o sí debe tener tamaño.
+
+3.
+A, C y D funcionan. Java ajusta bien el horario de verano, pero fechas inválidas como “marzo 40” o años no bisiestos truenan.
+
+4.
+A, C y D porque equals() compara contenido y == referencias. intern() hace que apunten al mismo objeto del pool.
+
+5.
+Resultado B. Todo es encadenado: vas modificando el mismo StringBuilder, no creando nuevos.
+
+6.
+Son 2 errores. Math.round(double) regresa long y Math.random() regresa double, no float.
+
+7.
+A y E. Convierte todo a GMT y ves que uno está 6 horas antes.
+
+8.
+A, B y F dan 5. Ojo con índices base 0 y cómo replace() cambia el string antes de hacer charAt().
+
+9.
+A, C y F. Arrays empiezan en 0, son de tamaño fijo y equals() compara referencia, no contenido.
+
+10.
+0 errores. Todo compila bien, solo hay que conocer qué tipo regresa cada método.
+
+11.
+No compila. LocalDate no maneja horas, entonces plusHours() no existe.
+
+12.
+A, D y E. indent y stripLeading se cancelan. Luego puro manejo de índices en substring.
+
+13.
+B. String es inmutable (no cambia), pero StringBuilder sí se modifica.
+
+14.
+A y F. Solo puedes crear un Instant directamente o desde algo con zona (como ZonedDateTime).
+
+15.
+C y E. Números primero, luego mayúsculas, luego minúsculas. Y binarySearch regresa negativo si no encuentra.
+
+16.
+A, B y G. Todo gira en cómo cuentan los caracteres de escape y lo que agrega indent.
+
+17.
+A y G. substring incluye inicio y excluye fin. Si inviertes índices → excepción.
+
+18.
+C y F. String no cambia con métodos, pero sí con +=. Y equals() compara contenido, no memoria.
+
+19.
+A, B y D. compare y mismatch dependen del orden y la posición donde difieren.
+
+20.
+A y D. Al adelantar horario, se brinca de 2 a 3, pero sigue siendo solo 1 hora de diferencia.
+
+21.
+A y C. reverse() es directo, y la otra opción encadena operaciones hasta llegar a "avaJ".
+
+22.
+A. LocalDate es inmutable, como no guardas los cambios, se queda igual.
