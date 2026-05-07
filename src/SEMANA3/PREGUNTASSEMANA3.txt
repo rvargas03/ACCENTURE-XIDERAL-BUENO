@@ -66,3 +66,69 @@ A y C. reverse() es directo, y la otra opción encadena operaciones hasta llegar
 
 22.
 A. LocalDate es inmutable, como no guardas los cambios, se queda igual.
+
+
+CAPITULO 5
+
+1.
+A y E. final puede usarse en variables estáticas o normales, y si es primitiva ya no puedes cambiar su valor.
+
+2.
+B y C. Antes del void solo van modificadores válidos como final o private.
+
+3.
+A y D. Los modificadores pueden ir en distinto orden mientras la sintaxis siga correcta.
+
+4.
+A, B, C y E. El número 6 puede promocionarse a varios tipos primitivos y también convertirse a Integer.
+
+5.
+A, C y D. Los métodos void pueden tener return; vacío y los int sí deben regresar un entero válido.
+
+6.
+A, B y F. En varargs (...) el parámetro variable siempre debe ir al final y solo puede haber uno.
+
+7.
+D y F. En ambos casos el arreglo varargs termina teniendo tamaño 2.
+
+8.
+D. Lo más común es usar atributos privados y métodos públicos para controlar acceso.
+
+9.
+B, C, D y F. Como están en paquetes distintos, no pueden acceder a miembros private, package-private o protected sin herencia.
+
+10.
+B. El bloque static cambia LENGTH a 10 antes de ejecutar main.
+
+11.
+B y E. Un método estático no puede llamar directamente uno de instancia sin objeto.
+
+12.
+B. Solo giraffe y el primer name son effectively final porque nunca cambian después de asignarse.
+
+13.
+D. length es estático, entonces ambos objetos comparten la misma variable.
+
+14.
+E. Hay 4 errores porque variables final static solo pueden asignarse una vez.
+
+15.
+B. Para importar métodos estáticos se usa import static.
+
+16.
+E. short se promociona a int y boolean/double terminan usando Object.
+
+17.
+B. Java es pass-by-value, entonces cambiar x dentro del método no modifica value.
+
+18.
+B, D y E. Reasignar referencias no afecta afuera, pero modificar el objeto sí.
+
+19.
+B, C y E. Variables estáticas pueden modificarse desde bloques estáticos o de instancia.
+
+20.
+A y E. Java siempre busca la sobrecarga más específica antes de usar varargs o Object.
+
+21.
+B y D. Para sobrecargar métodos deben cambiar los parámetros, no solo el retorno.
